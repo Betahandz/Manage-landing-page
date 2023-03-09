@@ -1,0 +1,449 @@
+@font-face {
+    font-family: vietBold;
+    src: url(BeVietnamPro/BeVietnamPro-Bold.ttf);
+}
+
+@font-face {
+    font-family: vietMedium;
+    src: url(BeVietnamPro/BeVietnamPro-Medium.ttf);
+}
+
+@font-face {
+    font-family: vietReg;
+    src: url(BeVietnamPro/BeVietnamPro-Regular.ttf);
+}
+
+:root {
+    /* typography */
+    --vbold: vietBold;
+    --vmed: vietMedium;
+    --vreg: vietReg;
+
+    /* color */
+    --Bright-Red: hsl(12, 88%, 59%);
+    --Bright-Red-Hover: hsl(12, 72%, 79%);
+    --Dark-Blue: hsl(228, 39%, 23%);
+    --Dark-Blue-Shadow: hsla(228, 39%, 23%, 0.63);
+    --Dark-Grayish-Blue: hsl(227, 12%, 61%);
+    --Very-Dark-Blue: hsl(233, 12%, 13%);
+    --Very-Pale-Red: hsl(13, 100%, 96%);
+    --Very-Light-Gray: hsl(0, 0%, 98%);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    resize: none;
+}
+
+html {
+    scroll-behavior: smooth;
+    font-size: 16px;
+}
+
+body {
+    width: 100%;
+    min-height: 100vh;
+    padding-top: 3rem;
+    overflow: hidden;
+    overflow-y: scroll;
+}
+
+.firstbg, .secondbg {
+    position: absolute;
+    z-index: -1;
+}
+
+.firstbg {
+    right: -15%;
+    top: -30%;
+}
+
+.secondbg {
+    bottom: -120%;
+    left: -60%;
+}
+
+.master, .condiments, .simplify, .wrapper {
+    width: 90%;
+    margin: auto;
+    max-width: 1100px;
+}
+
+.master {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.compass {
+    width: 50%;
+}
+
+.compass .coordinates {
+    list-style-type: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 1rem;
+}
+
+.coordinates .point {
+    white-space: nowrap;
+}
+
+.point a {
+    text-decoration: none;
+    font-family: var(--vreg);
+    font-size: 15px;
+    color: var(--Dark-Blue);
+}
+
+.point a:hover {
+    color: var(--Dark-Grayish-Blue);
+}
+
+.getStarted {
+    border: none;
+    outline: none;
+    padding: 12px 17px;
+    background-color: var(--Bright-Red);
+    border-radius: 40px;
+    color: var(--Very-Light-Gray);
+    font-family: var(--vmed);
+    cursor: pointer;
+    box-shadow: 0 5px 5px 0 var(--Dark-Blue-Shadow);
+}
+
+.menu {
+    display: none;
+}
+
+.getStarted:hover {
+    background-color: var(--Bright-Red-Hover);
+}
+
+/* the main */
+.condiments {
+    margin-top: 4rem;
+}
+
+.conInfo, .services {
+    display: flex;
+    align-items: stretch;
+    min-height: 200px;
+}
+
+.conTitle {
+    width: 50%;
+    min-height: 100%;
+    padding: 5rem 1rem 0 1rem;
+}
+
+.conTitle .conHead {
+    font-family: var(--vbold);
+    color: var(--Dark-Blue);
+    font-size: 3rem;
+    width: 85%;
+}
+
+
+.conTitle .summary {
+    margin-top: 1.7rem;
+    color: var(--Dark-Grayish-Blue);
+    /* background-color: white; */
+    width: calc(100% - 130px);
+    font-family: var(--vmed);
+    text-align: justify;
+}
+
+.conTitle .getStarted {
+    margin-top: 50px;
+}
+
+.services {
+    margin-top: 4rem;
+    position: relative;
+}
+
+.uniqueness, .uniqServices {
+    width: 50%;
+}
+
+h2 {
+    color: var(--Dark-Blue);
+    font-size: 2.2rem;
+    font-family: var(--vbold);
+    width: 90%;
+}
+
+.uniqueness .summary {
+    margin-top: 1.7rem;
+    color: var(--Dark-Grayish-Blue);
+    width: calc(100% - 200px);
+    font-family: var(--vmed);
+    /* text-align: justify; */
+}
+
+.uniqBloq {
+    display: flex;
+    align-items: flex-start;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+.uniqBloq .num {
+    padding: 12px 26px;
+    background-color: var(--Bright-Red);
+    border-radius: 40px;
+    color: var(--Very-Light-Gray);
+    font-family: var(--vmed);
+}
+
+.details {
+    padding: 10px;
+}
+
+h4 {
+    color: var(--Dark-Blue);
+    font-family: var(--vmed);
+}
+
+.dSum {
+    margin-top: 22px;
+    color: var(--Dark-Grayish-Blue);
+    font-family: var(--vreg);
+}
+
+.reviews {
+    margin-top: 4rem;
+}
+
+.sliderCon {
+    width: 100%;
+    overflow: hidden;
+}
+
+.rTitle {
+    text-align: center;
+}
+
+.slider {
+    margin-top: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 10px;
+    width: 132%;
+    overflow: hidden;
+}
+
+.profileImage img {
+    width: 75px;
+}
+
+.profileImage {
+    text-align: center;
+}
+
+.sReview {
+    border: none;
+    background-color: ghostwhite;
+    width: 30%;
+    height: 250px;
+    padding: 20px;
+    text-align: center;
+    border-radius: 5px;
+}
+
+.quote {
+    margin-top: 30px;
+    display: block;
+    font-size: 13.4px;
+    font-family: var(--vreg);
+    color: var(--Dark-Grayish-Blue);
+}
+
+.reviews .getStarted {
+    margin: 75px auto 0 auto;
+    display: block;
+}
+
+.teamwork {
+    background-color: var(--Bright-Red);
+    height: 200px;
+    position: relative;
+    margin-top: 130px;
+    overflow: hidden;
+}
+
+.teamwork img {
+    position: absolute;
+    z-index: 0;
+    opacity: 0.3;
+}
+
+.tpicone {
+    width: 500px;
+    top: -190%;
+    right: -23%;
+}
+
+.tpictwo {
+    width: 40%;
+    top: -10%;
+    left: 10%;
+}
+
+.simplify {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    height: 100%;
+    position: relative;
+    z-index: 1;
+}
+
+.simpTitle {
+    color: white;
+    width: 40%;
+    font-family: var(--vbold);
+}
+
+.simplify .getStarted {
+    background-color: white;
+    color: var(--Bright-Red);
+    box-shadow: none;
+    display: block;
+}
+
+.slave {
+    height: 230px;
+    background-color: var(--Very-Dark-Blue);
+}
+
+.wrapper {
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.endLogo, address, .emailing {
+    height: 150px;
+}
+
+.endLogo, .emailing {
+    display: flex;
+    flex-flow: column nowrap;
+    justify-content: space-between;
+}
+
+.social {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.social a:hover {
+    color: var(--Bright-Red);
+}
+
+address {
+    width: 50%;
+    display: flex;
+    align-items: stretch;
+    justify-content: space-evenly;
+}
+
+address div {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+address div:nth-of-type(2) {
+    justify-content: flex-start;
+    gap: 25px;
+}
+
+address div a {
+    color: white;
+    font-style: normal;
+    font-family: var(--vreg);
+    text-decoration: none;
+}
+
+address div a:hover {
+    color: var(--Bright-Red);
+}
+
+.emailing {
+    width: 20%;
+    text-align: right;
+}
+
+.form {
+    display: flex;
+    align-items: center;
+}
+
+.form #email {
+    border: none;
+    outline: none;
+    font-family: var(--vmed);
+    border-radius: 30px;
+    font-size: 14px;
+    color: var(--Bright-Red);
+    padding: 5px 10px
+}
+
+.form #submit {
+    padding: 7px 15px;
+    background-color: var(--Bright-Red);
+    color: white;
+    font-family: var(--vreg);
+    border: none;
+    outline: none;
+    border-radius: 30px;
+    cursor: pointer;
+}
+
+.copyright {
+    color: var(--Dark-Grayish-Blue);
+    font-family: var(--vmed);
+}
+
+.alert {
+    color: var(--Bright-Red);
+    text-align: left;
+    font-family: var(--vmed);
+    font-size: 14px;
+}
+
+body::-webkit-scrollbar {
+    width: 15px;
+}
+
+body::-webkit-scrollbar-track{
+    background-color: var(--Very-Pale-Red);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-track:active {
+    background-color: var(--Bright-Red);
+}
+
+body::-webkit-scrollbar-thumb {
+    width: 13px;
+    background-color: var(--Very-Pale-Red);
+    border: solid 1px var(--Very-Pale-Red);
+    border-radius: 10px;
+}
+
+body::-webkit-scrollbar-button {
+    height: 10px;
+    background-color: var(--Bright-Red);
+    border-radius: 50%;
+}
