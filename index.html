@@ -12,8 +12,35 @@
   <link rel="stylesheet" href="styles.css" id="design">
 
   <!-- script -->
+  <script src="script.js" defer></script>
 </head>
 <body>
+  <aside class="mobileMenu">
+    <!-- the closeMenu -->
+    <img src="images/icon-close.svg" alt="close" class="closemenu">
+    
+    <!-- the links -->
+    <nav class="direction">
+      <ul class="path">
+        <li class="link">
+          <a href="#">Pricing</a>
+        </li>
+        <li class="link">
+          <a href="#">Product</a>
+        </li>
+        <li class="link">
+          <a href="#about">About Us</a>
+        </li>
+        <li class="link">
+          <a href="#">Careers</a>
+        </li>
+        <li class="link">
+          <a href="#community">Community</a>
+        </li>
+      </ul>
+    </nav>
+  </aside>
+
   <!-- the bg images -->
   <div class="firstbgCon">
     <img src="images/bg-tablet-pattern.svg" alt="tablet bg" class="firstbg" loading="lazy">
@@ -33,13 +60,13 @@
           <a href="#">Product</a>
         </li>
         <li class="point">
-          <a href="#">About Us</a>
+          <a href="#about">About Us</a>
         </li>
         <li class="point">
           <a href="#">Careers</a>
         </li>
         <li class="point">
-          <a href="#">Community</a>
+          <a href="#community">Community</a>
         </li>
       </ul>
     </nav>
@@ -94,7 +121,7 @@
         </article>
   
         <!-- our services -->
-        <article class="uniqServices">
+        <article class="uniqServices" id="about">
           <!-- single bloq -->
           <section class="uniqBloq">
             <!-- detail container -->
@@ -153,7 +180,7 @@
     </section>
   </main>
 
-  <aside class="reviews">
+  <aside class="reviews" id="community">
     <h2 class="rTitle">
       What they’ve said
     </h2>
@@ -215,7 +242,7 @@
       </section>
 
       <div class="currentReview">
-        <div class="circle"></div>
+        <div class="circle on"></div>
         <div class="circle"></div>
         <div class="circle"></div>
         <div class="circle"></div>
@@ -241,7 +268,7 @@
   <footer class="slave">
     <div class="wrapper">
       <div class="endLogo">
-        <img src="images/logo.svg" loading="lazy" alt="logo">
+        <img src="images/logo.svg" loading="lazy" alt="logo" class="endLimage">
         <div class="social">
           <a href=""><img src="images/icon-facebook.svg" alt="social"></a>
           <a href=""><img src="images/icon-youtube.svg" alt="social"></a>
