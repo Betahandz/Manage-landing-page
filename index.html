@@ -15,7 +15,9 @@
 </head>
 <body>
   <!-- the bg images -->
-  <img src="images/bg-tablet-pattern.svg" alt="tablet bg" class="firstbg" loading="lazy">
+  <div class="firstbgCon">
+    <img src="images/bg-tablet-pattern.svg" alt="tablet bg" class="firstbg" loading="lazy">
+  </div>
 
   <header class="master">
     <span class="logoCon">
@@ -60,7 +62,10 @@
         </p>
 
         <button class="getStarted" type="button">Get Started</button>
+        
+        <img src="images/bg-tablet-pattern.svg" alt="tab" class="between">
       </article>
+
 
       <article class="conPictorial">
         <img src="images/illustration-intro.svg" alt="ilustrate" loading="lazy" class="conInfoPic">
@@ -69,74 +74,82 @@
 
     <section class="services">
       <!-- the second background -->
-      <img src="images/bg-tablet-pattern.svg" alt="tablet bg" class="secondbg" loading="lazy">
-
-      <!-- uniqueness -->
-      <article class="uniqueness">
-        <h2 class="uniqHead">
-          What’s different about Manage?
-        </h2>
-
-        <p class="summary">
-          Manage provides all the functionality your team needs, without
-          the complexity. Our software is tailor-made for modern digital
-          product teams.
-        </p>
-      </article>
-
-      <!-- our services -->
-      <article class="uniqServices">
-        <!-- single bloq -->
-        <section class="uniqBloq">
-          <span class="num">01</span>
-          <div class="details">
-            <h4 class="dTitle">
-              Track company-wide progress
-            </h4>
+      <div class="secondbgCon">
+        <img src="images/bg-tablet-pattern.svg" alt="tablet bg" class="secondbg" loading="lazy">
+      </div>
+      
+      <!-- the uniqueness -->
+      <div class="uniqWrapper">
+        <!-- uniqueness -->
+        <article class="uniqueness">
+          <h2 class="uniqHead">
+            What’s different about Manage?
+          </h2>
+  
+          <p class="summary">
+            Manage provides all the functionality your team needs, without
+            the complexity. Our software is tailor-made for modern digital
+            product teams.
+          </p>
+        </article>
+  
+        <!-- our services -->
+        <article class="uniqServices">
+          <!-- single bloq -->
+          <section class="uniqBloq">
+            <!-- detail container -->
+            <div class="detCon">
+              <span class="num">01</span>
+              <h4 class="dTitle">
+                Track company-wide progress
+              </h4>
+            </div>
 
             <p class="dSum">
               See how your day-to-day tasks fit into the wider vision. Go from
               tracking progress at the milestone level all the way done to the
               smallest of details. Never lose sight of the bigger picture again.
             </p>
-          </div>
-        </section>
-        <!-- end of single uniq -->
-
-        <!-- single bloq -->
-        <section class="uniqBloq">
-          <span class="num">02</span>
-          <div class="details">
-            <h4 class="dTitle">
-              Advanced built-in reports
-            </h4>
-
+          </section>
+          <!-- end of single uniq -->
+  
+          <!-- single bloq -->
+          <section class="uniqBloq">
+            <!-- detail container -->
+            <div class="detCon">
+              <span class="num">02</span>
+              <h4 class="dTitle">
+                Advanced built-in reports
+              </h4>
+            </div>
+            
             <p class="dSum">
               Set internal delivery estimates and track progress toward company
               goals. Our customisable dashboard helps you build out the reports
               you need to keep key stakeholders informed.
             </p>
-          </div>
-        </section>
-        <!-- end of single uniq -->
-
-        <!-- single bloq -->
-        <section class="uniqBloq">
-          <span class="num">03</span>
-          <div class="details">
-            <h4 class="dTitle">
-              Everything you need in one place
-            </h4>
-
+          </section>
+          <!-- end of single uniq -->
+  
+          <!-- single bloq -->
+          <section class="uniqBloq">
+            <div class="detCon">
+              <span class="num">03</span>
+              
+              <h4 class="dTitle">
+                Everything you need in one place
+              </h4>
+            </div>
+            
             <p class="dSum">
               Stop jumping from one service to another to communicate, store files,
               track tasks and share documents. Manage offers an all-in-one team
               productivity solution.
             </p>
-          </div>
-        </section>
-        <!-- end of single uniq -->
-      </article>
+          </section>
+          <!-- end of single uniq -->
+        </article>
+      </div>
     </section>
   </main>
 
@@ -200,6 +213,13 @@
           </q>
         </fieldset>
       </section>
+
+      <div class="currentReview">
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+        <div class="circle"></div>
+      </div>
     </div>
 
     <button class="getStarted" type="button">Get Started</button>
