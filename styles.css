@@ -256,9 +256,8 @@ h4 {
 
 .sliderCon {
     margin: 50px auto 0 auto;
-    width: 90%;
+    width: 100%;
     min-height: 200px;
-    overflow: hidden;
 }
 
 .rTitle {
@@ -266,12 +265,28 @@ h4 {
 }
 
 .slider {
-    gap: 10px;
     width: 100%;
-    overflow: hidden;
-    white-space: nowrap;
-    max-width: 1200px;
+    max-width: 90%;
     margin: auto;
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.sReview {
+    width: calc(100%/3);
+    display: inline;
+    white-space: normal;
+    text-align: center;
+    background-color: var(--Very-Light-Gray);
+    padding: 20px 0;
+    border: none;
+    outline: none;
+    transform: translateY(100%);
+    transition: .5s .3s;
+}
+
+.showReview {
+    transform: translateY(0%);
 }
 
 .profileImage img {
@@ -282,21 +297,6 @@ h4 {
     text-align: center;
 }
 
-.sReview {
-    border: none;
-    width: calc(100% / 3);
-    margin-left: 15px;
-    white-space: normal;
-    background-color: ghostwhite;
-    min-height: 250px;
-    padding: 20px;
-    text-align: center;
-    border-radius: 5px;
-    display: inline-block;
-}
-.sReview:first-child {
-    margin-left: unset;
-}
 
 .currentReview {
     display: none;
@@ -336,18 +336,39 @@ h4 {
     position: absolute;
     z-index: 0;
     opacity: 0.3;
+    transition: .7s;
 }
 
 .tpicone {
     width: 500px;
     top: -190%;
     right: -23%;
+    transform: translateY(100%);
 }
 
 .tpictwo {
     width: 40%;
     top: -10%;
     left: 10%;
+    transform: translateY(-100%);
+}
+
+/* classes to show picture */
+.showPic {
+    transform: translate(0%);
+}
+.anime {
+    animation: rotate 5s linear infinite;
+}
+/* animation */
+@keyframes rotate {
+    0% {
+        transform: rotateY(0deg);
+    }
+
+    100% {
+        transform: rotateY(360deg);
+    }
 }
 
 .simplify {
@@ -516,9 +537,9 @@ body::-webkit-scrollbar-button {
 /******** MEDIA ************/
 /* MAX WIDTH OF 375PX */
 @media (max-width: 768px) {
-    /* .sReview {
+    .sReview {
         width: calc(100%/1)
-    } */
+    }
     .mobileMenu {
         position: fixed;
         transition: .7s 1s;
@@ -530,11 +551,10 @@ body::-webkit-scrollbar-button {
         background: linear-gradient(rgba(255, 255, 255, 0.521), var(--Dark-Blue-Shadow));
     }
     .closemenu {
+        position: fixed;
+        right: 35px;
+        top: 22px;
         display: block;
-        margin-top: 25px;
-        margin-left: 440px;
-        margin-bottom: 20px;
-        cursor: pointer;
     }
     .direction {
         width: 90%;
@@ -546,6 +566,7 @@ body::-webkit-scrollbar-button {
         display: flex;
         align-items: center;
         justify-content: center;
+        margin-top: 100px;
     }
     .path {
         list-style: none;
@@ -749,10 +770,22 @@ body::-webkit-scrollbar-button {
     .reviews {
         margin-top: 3rem;
     }
+    .currentReview {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 10px;
+    }
+    .circle {
+        display: block;
+        transition: .7s .4s;
+    }
 }
-
-
 /*** classes ***/
 .show {
     transform: translateX(0%);
+}
+.active {
+    background-color: var(--Bright-Red);
+    transform: translateY(20px);
 }
